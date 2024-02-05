@@ -25,6 +25,10 @@ exports.endpoints = async (app) => {
       res.status(200).send('test');
   });
 
+  app.use('/start', (req, res) => {
+      res.status(200).send('start');
+  });
+
   app.use('/', (req, res) => {
   return res.status(200).send('ping !');
 });
